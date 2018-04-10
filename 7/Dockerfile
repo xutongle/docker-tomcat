@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:trusty
 
 LABEL maintainer="xutongle@gmail.com"
 
