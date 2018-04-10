@@ -20,9 +20,8 @@ RUN curl -fSL ${TOMCAT_TGZ_URL} -o apache-tomcat-${TOMCAT_VERSION}.tar.gz \
     && tar -xvf apache-tomcat-${TOMCAT_VERSION}.tar.gz --strip-components=1 \
     && rm -f bin/*.bat \
     && rm -rf webapps/* \
-    && rm -f apache-tomcat-${TOMCAT_VERSION}.tar.gz
-
-sed -i 's/Connector port="8080"/Connector port="80"/g' /usr/local/tomcat/conf/server.xml
+    && rm -f apache-tomcat-${TOMCAT_VERSION}.tar.gz \
+    && sed -i 's/Connector port="8080"/Connector port="80"/g' /usr/local/tomcat/conf/server.xml
 
 EXPOSE 80
 
