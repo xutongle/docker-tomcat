@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 LABEL maintainer="xutongle@gmail.com"
 
-RUN apt-get update && apt-get install -y ca-certificates curl arj openjdk-7-jdk libapr1 libapr1-dev --no-install-recommends \
+RUN apt-get update && apt-get install -y ca-certificates curl openjdk-7-jdk libapr1 libapr1-dev --no-install-recommends \
     && rm -r /var/lib/apt/lists/* \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime \
     && locale-gen zh_CN.UTF-8
